@@ -1,3 +1,4 @@
-protobuf>=7.36.2
-websocket-client
-requests
+# 使用固定版本，防止依赖包更新后缓存失效
+protobuf==7.36.2
+websocket-client==1.9.2
+requests==2.34.2

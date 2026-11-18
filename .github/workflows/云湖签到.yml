@@ -1,0 +1,22 @@
+name: 云湖签到
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  云湖签到:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '3.15' 
+    - run: pip install -r requirements.txt
+    - run: python 主程序.py >> $GITHUB_STEP_SUMMARY
+      env:
+        ID_TOKEN: ${{ secrets.ID_TOKEN }}
