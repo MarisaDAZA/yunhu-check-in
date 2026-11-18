@@ -1,0 +1,3 @@
+protobuf>=7.36.2
+websocket-client
+requests
