@@ -3,7 +3,7 @@ from yunhu_pb2 import ListMessageBySeq, MessageList, ButtonReport
 
 class 接口:
     def __init__(自己, 令牌):
-        自己.客户端 = Client(http2=True, base_url='https://chat-go.jwzhd.com/v1/msg')
+        自己.客户端 = Client(base_url='https://chat-go.jwzhd.com/v1/msg')
         自己.客户端.headers.update({'Token': 令牌})
 
     def 列出消息(自己, 聊天标识, 聊天类型):

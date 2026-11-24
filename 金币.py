@@ -21,4 +21,4 @@ def 抽奖(token):
                     点击按钮(消息.id, 按钮[0][0]['value'])
                 else:
                     点击按钮(消息.id, 按钮[1][0]['value'])
-            sleep(1)
+        sleep(1)
